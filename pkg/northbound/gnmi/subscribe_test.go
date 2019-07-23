@@ -221,7 +221,6 @@ func Test_WrongDevice(t *testing.T) {
 		t.FailNow()
 	case <-time.After(50 * time.Millisecond):
 	}
-
 }
 
 func Test_WrongPath(t *testing.T) {
@@ -283,7 +282,6 @@ func Test_ErrorDoubleSubscription(t *testing.T) {
 		Responses: responsesChan,
 		Signal:    make(chan struct{}),
 	}
-
 	go func() {
 		err = server.Subscribe(serverFake)
 		assert.NilError(t, err, "Unexpected error doing Subscribe")

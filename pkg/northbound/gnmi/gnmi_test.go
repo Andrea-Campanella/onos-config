@@ -62,7 +62,6 @@ func tearDown(mgr *manager.Manager, wg *sync.WaitGroup) {
 
 	mgr.Dispatcher = &dispatcher.Dispatcher{}
 	log.Infof("Dispatcher Teardown %p", mgr.Dispatcher)
-
 }
 
 func listenToTopoLoading(deviceChan <-chan events.TopoEvent) {
